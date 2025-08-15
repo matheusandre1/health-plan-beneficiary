@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.OffsetDateTime;
-import java.util.UUID;
-
 @Entity
 @Setter
 @Getter
@@ -22,8 +19,8 @@ public class Document extends BaseEntity {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "recipient_id")
-    private Recipient recipient;
+    @JoinColumn(name = "beneficiary_id")
+    private Beneficiary beneficiary;
 
     public Document(DocumentDto documentDto)
     {

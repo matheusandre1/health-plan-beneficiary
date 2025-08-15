@@ -1,0 +1,19 @@
+package br.com.health_plan_beneficiary.infra.springDoc;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class DocConfiguration {
+
+    @Bean
+    public OpenAPI customOpenApi()
+    {
+        return new OpenAPI()
+                .info(new Info().title("Health-Plan-Beneficiary")
+                .description("Aplicação de Gestão de Beneficiário de Plano de Saúde"));
+
+    }
+}
